@@ -8,17 +8,20 @@ all:
           dev.ansible.todorivanov.net
           dev2.ansible.todorivanov.net
         group_vars: 
+          apache_domain: dev.ansible.todorivanov.net
           http_port: 1338
       staging: 
         hosts: 
           staging.ansible.todorivanov.net
           staging2.ansible.todorivanov.net
         group_vars: 
+          apache_domain: staging.ansible.todorivanov.net
           http_port: 1338
       production: 
         hosts: 
           production.ansible.todorivanov.net
         group_vars:
+          apache_domain: production.ansible.todorivanov.net
           http_port: 80
 
 

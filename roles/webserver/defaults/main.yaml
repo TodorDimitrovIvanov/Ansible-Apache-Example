@@ -1,0 +1,5 @@
+--- 
+apache_port: {{ http_port }}
+apache_server_admin: admin@todorivanov.net
+apache_domain: {{ apache_domain }}
+apache_document_root: /var/www/html
