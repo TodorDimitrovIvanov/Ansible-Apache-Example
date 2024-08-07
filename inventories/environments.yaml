@@ -1,0 +1,24 @@
+all: 
+  vars: 
+    ansible_user: devops 
+  children: 
+    webservers: 
+      dev: 
+        hosts: 
+          dev.ansible.todorivanov.net
+          dev2.ansible.todorivanov.net
+        group_vars: 
+          http_port: 1338
+      staging: 
+        hosts: 
+          staging.ansible.todorivanov.net
+          staging2.ansible.todorivanov.net
+        group_vars: 
+          http_port: 1338
+      production: 
+        hosts: 
+          production.ansible.todorivanov.net
+        group_vars:
+          http_port: 80
+
+
