@@ -1,0 +1,5 @@
+---
+apache_admin_email: 'admin@todorivanov.net'
+html_app_repo: 'https://github.com/schoolofdevops/html-sample-app.git'
+html_app_dest: /var/www/html
+html_app_branch: master

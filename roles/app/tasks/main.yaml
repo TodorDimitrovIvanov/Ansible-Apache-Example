@@ -1,0 +1,30 @@
+--- 
+- name: Install Git 
+  apt: 
+    name: git 
+    state: present 
+  tags: 
+    - html_app
+    - install 
+
+- name: Clone HTML App from GitHub
+  git: 
+    repo: {{ html_app_repo }}
+    dest: {{ html_app_dest }}
+    version: {{ html_app_branch }}
+  notify: Restart Apache
+  tags: 
+    - html_app 
+    - deploy 
+
+- name: Set correct permissions on app dir 
+  file: 
+    path: {{ html_app_dest }}
+    state: directory
+    owner: www-data 
+    group: www-data 
+    mode: '0755'
+    recurse: yes 
+  tags: 
+    - html_app
+    - config 

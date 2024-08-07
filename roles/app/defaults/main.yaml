@@ -1,0 +1,3 @@
+---
+html_app_dest: /var/www/html
+html_app_version: master  
